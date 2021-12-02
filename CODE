@@ -1,0 +1,46 @@
+// C++ code
+//
+#define Led_VD1 2
+#define Led_VD2 3
+#define Led_VD3 4
+#define Led_AM1 5
+#define Led_AM2 6
+#define Led_AM3 7
+#define Led_VM1 8
+#define Led_VM2 9
+#define Led_VM3 10
+void setup()
+{
+  pinMode(A0, INPUT);
+  pinMode(Led_VD1, OUTPUT);
+  pinMode(Led_VD2, OUTPUT);
+  pinMode(Led_VD3, OUTPUT);
+  pinMode(Led_AM1, OUTPUT);
+  pinMode(Led_AM2, OUTPUT);
+  pinMode(Led_AM3, OUTPUT);
+  pinMode(Led_VM1, OUTPUT);
+  pinMode(Led_VM2, OUTPUT);
+  pinMode(Led_VM3, OUTPUT);
+}
+
+void loop()
+{
+  analogWrite(Led_VD1, constrain(analogRead(A0), 0, 255));
+  delay(1000); // esperar por 1000 milisegundo(s)
+  analogWrite(Led_VD2, constrain(analogRead(A0), 0, 255));
+  delay(1000); // esperar por 1000 milisegundo(s)
+  analogWrite(Led_VD3, constrain(analogRead(A0), 0, 255));
+  delay(1000); // esperar por 1000 milisegundo(s)
+  analogWrite(Led_AM1, constrain(analogRead(A0), 0, 255));
+  delay(1000); // esperar por 1000 milisegundo(s)
+  analogWrite(Led_AM2, constrain(analogRead(A0), 0, 255));
+  delay(1000); // esperar por 1000 milisegundo(s)
+  analogWrite(Led_AM3, constrain(analogRead(A0), 0, 255));
+  delay(1000); // esperar por 1000 milisegundo(s)
+  analogWrite(Led_VM1, constrain(analogRead(A0), 0, 255));
+  delay(1000); // esperar por 1000 milisegundo(s)
+  analogWrite(Led_VM2, constrain(analogRead(A0), 0, 255));
+  delay(1000); // esperar por 1000 milisegundo(s)
+  analogWrite(Led_VM3, constrain(analogRead(A0), 0, 255));
+  delay(1000); // esperar por 1000 milisegundo(s)
+}
